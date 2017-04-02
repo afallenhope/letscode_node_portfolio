@@ -1,0 +1,45 @@
+<% include partials/header %>
+<% include partials/navbar %>
+<div class="container">
+  <h2 class="page-header">Contact</h2>
+  <p>There are many ways you may contact me, the best way is probably through our contact form. Please allow 24-48 hours for a response.</p>
+  <form action="/contact" method="POST" role="form">
+    <legend>Contact me</legend>  
+    <div class="form-group">
+      <label for="">Name</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="txtName"  name="contact_name" placeholder="Your name">        
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+        </span>        
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Email</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="txtEmail" name="contact_email" placeholder="Your email">      
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default"><i class="fa fa-envelope"></i></button>
+        </span>      
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Subject</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="txtSubject" name="contact_subject" placeholder="Subject">        
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default"><i class="fa fa-question"></i></button>
+        </span>        
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Comments</label>
+      <textarea name="contact_comments" id="" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>  
+</div>
+
+<% include partials/footer %>
+

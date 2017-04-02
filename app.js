@@ -2,11 +2,15 @@ const express = require("express") // import our Express module
 const app = express() // instantiate an Expres app.
 const path = require("path")
 const mainRouter = require("./routes/default") // import our default routes .
+const bodyParser = require("body-parser")
 const port = process.env.PORT || 9999
 
 app
   .set("views", "./views")  // sets the view folder to ./views
   .set("view engine", "ejs")  // use our EJS templating engine
+
+  .use(bodyParser.json({type: "application/json"})) // allow json post
+  .use(bodyParser.urlencoded({extended : false})) // user urlformencoded
 
   .use("/css", express.static(path.join(__dirname,"./assets/css"))) // look in our assets/css when search for /css
   .use("/js", express.static(path.join(__dirname,"./assets/js"))) // look in our assets/js when search for /js
