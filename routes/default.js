@@ -9,7 +9,7 @@ router
   .get("/about", (req, res) => res.render("about")) // render ./views/about page.
 
   // when user requests /contact
-  .get("/contact", (req, res) => res.render("contact")) // render our ./views/contact page
+  .get("/contact", (req, res) => res.render("contact")) // render ./views/contact page
 
   // when we receive a post from our contact form.
   .post("/contact", (req, res) => {
