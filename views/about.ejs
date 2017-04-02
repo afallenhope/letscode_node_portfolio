@@ -1,14 +1,40 @@
-<%
- include partials/header 
- include partial/navbar
-%>
-<div class="container-fluid">
-  <img src="https://placehold.it/1600x128?text=HEADER" alt="Header image">
-</div>
-
+<% include partials/header %>
 <div class="container">
+  <header role="header" id="mainHeader"> 
+    <% include partials/navbar %>
+    <img src="https://placehold.it/1274x128?text=HEADER" alt="Header image" class="img-responsive" />
+  </header>
+
   <h2 class="page-header">About</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis facere, maiores beatae sunt sapiente est ullam minus laboriosam. Odit dolore cupiditate neque beatae incidunt? Error, deleniti, cum. Nesciunt, iusto ut!</p>
-</div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">Testimonials</div>
+      <div class="panel-body">
+        <p><quote class="quote">"Great dev, tought me all the things except don't trust his spelling."</quote>-- Randomguy 1</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">Testimonials</div>
+      <div class="panel-body">
+        <p> <quote class="quote">"We created app together on Twitch!"</quote>
+        -- Random 2</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">Testimonials</div>
+      <div class="panel-body">
+        <p>
+          <quote class="quote">"Helpped me learn all the things"</quote>
+          -- Random 3
+        </p>
+      </div>
+    </div>
+  </div>
 
 <% include partials/footer %>
