@@ -19,11 +19,11 @@ app
   
   .use("/css",express.static(path.join(__dirname,"./node_modules/font-awesome/css"))) // look in our assets/fonts when we request /fonts
   .use("/fonts",express.static(path.join(__dirname,"./node_modules/font-awesome/fonts"))) // look in our assets/fonts when we request /fonts
-
-  
-  
+   
   .use("/", mainRouter) // creates a path router to module ./routes/default.js  
+  
+  
   // listen on port 9999 
-  .listen(port, function(err,req,res){
+  .listen(port, (req,res) => {
     console.log("Listening http://127.0.0.1:" + port)
   })
