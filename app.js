@@ -24,7 +24,7 @@ app
   .use("/css",express.static(path.join(__dirname,"./node_modules/font-awesome/css"))) // look in ./node_modules/font-awesome/css when we request /css
   .use("/fonts",express.static(path.join(__dirname,"./node_modules/font-awesome/fonts"))) // look in ./node_modules/font-awesome/fonts when we request /fonts
 
-  .use("/", mainRouter) // creates a path router to module ./routes/default.js
+  .use("/", mainRouter) // creates a path to the router module at ./routes/default.js
 
 
   // listen on port 9999
